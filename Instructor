@@ -1,0 +1,20 @@
+public class Instructor extends Person {
+ public final String department;
+ public Instructor(String firstName, String lastName, int idNumber, String department) {
+     super(firstName, lastName, idNumber);
+     this.department = department;
+    }
+ 
+ public String toString() {
+        return "Prof. " + lastName + " (Department of " + department + ")";
+    }
+ public String getFirstName() {
+     return firstName;
+    }
+ public String getLastName() {
+     return lastName;   
+    }
+ public int getID() {
+     return idNumber;   
+    }
+}
