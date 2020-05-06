@@ -1,0 +1,24 @@
+public abstract class Person {
+    protected final String firstName;
+    protected final String lastName;
+    protected final int idNumber;
+  public Person(String firstName, String lastName, int idNumber) {
+      this.firstName = firstName;
+      this.lastName = lastName;
+      this.idNumber = idNumber;
+    }
+    
+    public String toString() {
+     return firstName + " " + lastName;   
+    }
+    
+    public String getFirstName() {
+     return firstName;   
+    }
+    public String getLastName() {
+     return lastName;   
+    }
+    public int getID() {
+     return idNumber;   
+    }
+}
