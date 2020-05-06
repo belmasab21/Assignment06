@@ -1,0 +1,60 @@
+public final class Assignment6 {
+   public static void main(String[] args) {
+        //    TODO:
+        //    Fill this array with at least 5 Students and 3 Instructors
+     Student student1 = new Student("John", "Appleseed", 1234, "Geography", "General", 3.70);
+     Student student2 = new Student("Bob", "Builder", 5678, "Construction", "General", 3.24);
+     Student student3 = new Student("Alek", "Belmas", 1924, "Computer Science", "Web Design", 2.83);
+     Student student4 = new Student("Jane", "Doe", 2943, "Math", "General", 2.25);
+     Student student5 = new Student("Jim", "Hendrix", 2573, "Music", "Performance", 3.90);
+     Instructor instructor1 = new Instructor("Sam", "Schmidt", 37857, "Physics");
+     Instructor instructor2 = new Instructor("Mary", "Smith", 84584, "Geology");
+     Instructor instructor3 = new Instructor("Lenny", "Cravitz", 37573, "History");
+    
+     Person[] people = {
+     student1,
+     student2,
+     student3,
+     student4,
+     student5,
+     instructor1,
+     instructor2,
+     instructor3   
+     };
+    
+
+    System.out.println("Everyone in the database:");
+    //    TODO:
+    //    Print out every Person in the array
+    //    Print each instance directly with System.out.println() (no method call!)
+    System.out.println(student1.toString());
+    System.out.println(student2.toString());
+    System.out.println(student3.toString());
+    System.out.println(student4.toString());
+    System.out.println(student5.toString());
+    System.out.println(instructor1.toString());
+    System.out.println(instructor2.toString());
+    System.out.println(instructor3.toString());
+    System.out.println("\nAll of the Instructors in the database:");
+    //    TODO:
+    //    Print out each Student in the database
+    //    Print each instance directly with System.out.println() (no method call!)
+    System.out.println(instructor1.toString());
+    System.out.println(instructor2.toString());
+    System.out.println(instructor3.toString());
+    System.out.println("\nThe average GPA of Students in the database:");
+    //    TODO:
+    //    Calculate the arithmetic mean (average) GPA of all Students in the array
+    //    To calculate a mean: Divide the sum of all values by the number of values
+    //    Print this value
+    double total = 0;    
+    for (int i = 0; i < people.length; i++) {
+     Person value = people[i];
+    if (value instanceof Student) {
+       Student students = (Student)value; 
+       double avg = students.gpa / 5;
+       System.out.printf("The average GPA for the students is: %.2f%n", avg);
+    }     
+}       
+   }
+}
